@@ -28,16 +28,6 @@ screen= t.Screen()
 screen.exitonclick()
 
 
-
-
-
-
-
-
-
-
-
-
 # import colorgram
 #
 # rgb_colors= []
