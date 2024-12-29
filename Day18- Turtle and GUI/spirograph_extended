@@ -1,0 +1,71 @@
+import turtle
+from turtle import Turtle, Screen
+import random
+
+"""Giving alias name to a module """
+
+# import turtle as t
+
+timmy = Turtle()
+
+timmy.shape("arrow")
+# timmy.color('blue')
+"""Making colors as 255 to get all colors"""
+turtle.colormode(255)
+
+
+def random_color():
+    r = random.randint(0, 255)
+    g = random.randint(0, 255)
+    b = random.randint(0, 255)
+    color = (r, g, b)
+    return color
+
+
+"""Drawing a square """
+# for _ in range(4):
+#     timmy.forward(100)
+#     timmy.right(90)
+
+"Modules are present in the virtual environment (sandbox) of the project "
+
+"""Turtle relies on the tkinter for its graphics """
+# for _ in range(15):
+#     timmy.forward(10)
+#     timmy.penup()
+#     timmy.forward(10)
+#     timmy.pendown()
+
+"""Making different shapes together"""
+colours = ["CornflowerBlue", "DarkOrchid", "DeepSkyBlue", "wheat", "Yellow", "Pink", "Purple"]
+directions = [0, 90, 180, 270]
+# timmy.width(10)
+timmy.speed("fastest")
+"""Drawing different shapes like square pentagon etc """
+# def draw_shape(num_sides):
+#     angle = 360 / num_sides
+#     for _ in range(num_sides):
+#         timmy.forward(100)
+#         timmy.right(angle)
+#
+#
+# for shape_side in range(3, 11):
+#     timmy.color(random.choice(colours))
+#     draw_shape(shape_side)
+"""Random walk by the turtle"""
+# for _ in range(200):
+#     timmy.color(random_color())
+#     timmy.forward(50)
+#     timmy.setheading(random.choice(directions))
+
+"""Making a spirograph using turtle"""
+def draw_spiro(size_of_gap):
+    for _ in range(int(360/size_of_gap)):
+        timmy.color(random_color())
+        timmy.circle(100)
+        # current_heading = timmy.heading()
+        timmy.setheading((timmy.heading() + size_of_gap))
+
+draw_spiro(5)
+screen = Screen()
+screen.exitonclick()
