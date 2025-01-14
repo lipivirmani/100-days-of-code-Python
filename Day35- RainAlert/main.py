@@ -4,7 +4,7 @@ from twilio.http.http_client import TwilioHttpClient
 import os
 
 
-OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast"
+OWM_Endpoint = "https://api.openweathermap.org/data/2.5/forecast" # Environment variable setup
 api_key = os.environ.get("OWM_API_KEY")
 account_sid = "YOUR ACCOUNT SID"
 auth_token = os.environ.get("AUTH_TOKEN")
@@ -13,7 +13,7 @@ weather_params = {
     "lat": 46.947975,
     "lon": 7.447447,
     "appid": api_key,
-    "cnt": 4, }
+    "cnt": 4, # number of entries to be added  }
 
 resp = requests.get(OWM_Endpoint, params=weather_params)
 resp.raise_for_status()
