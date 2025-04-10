@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}Brew & Browse{% endblock %}
+
+{% block content %}
+<div class="coffee-bg">
+  <div class="coffee-content">
+    <h1>☕ Brew & Browse 💻</h1>
+    <p>Discover your perfect work spot — strong coffee, fast wifi, and cozy vibes.</p>
+    <a class="btn btn-coffee btn-lg" href="{{ url_for('cafes') }}">Find Cafes</a>
+  </div>
+</div>
+{% endblock %}
