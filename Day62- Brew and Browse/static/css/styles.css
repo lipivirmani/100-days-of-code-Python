@@ -1,0 +1,53 @@
+.coffee-bg {
+  background: linear-gradient(to right, #d7ccc8, #a1887f, #795548, #5d4037);
+  min-height: 100vh;
+  color: #2e2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.coffee-content {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  max-width: 700px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.coffee-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #4e342e;
+}
+
+.coffee-content p {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #4e342e;
+}
+
+.btn-coffee {
+  background-color: #6f4e37;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  padding: 6px 12px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+.btn-coffee:hover {
+  background-color: #5a3c2c;
+  color: #fff;
+}
+.coffee-bg-dark {
+  background: linear-gradient(to right, #3e2723, #4e342e, #5d4037, #6d4c41);
+  min-height: 100vh;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Poppins', sans-serif;
+}
