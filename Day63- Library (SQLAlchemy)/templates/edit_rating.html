@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Edit Rating</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: #f2f2f2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .form-container {
+        background: #ffffff;
+        padding: 2rem 2.5rem;
+        border-radius: 12px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        width: 350px;
+        text-align: center;
+      }
+
+      .form-container h2 {
+        margin-bottom: 1rem;
+        color: #333;
+      }
+
+      .form-container p {
+        color: #555;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 0.6rem;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        margin-bottom: 1.2rem;
+        font-size: 1rem;
+      }
+
+      button {
+        background-color: #4CAF50;
+        color: white;
+        padding: 0.7rem 1.5rem;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      button:hover {
+        background-color: #45a049;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Edit Rating</h2>
+      <form action="{{ url_for('edit') }}" method="POST">
+        <p><strong>Book Name:</strong> {{book.title}}</p>
+        <p><strong>Current Rating:</strong> {{book.rating}}</p>
+        <input type="hidden" name="id" value="{{book.id}}" />
+        <input name="rating" type="text" placeholder="New Rating" required />
+        <button type="submit">Change Rating</button>
+      </form>
+    </div>
+  </body>
+</html>
