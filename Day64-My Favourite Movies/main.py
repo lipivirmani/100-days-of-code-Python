@@ -8,7 +8,7 @@ from wtforms import StringField, SubmitField
 from wtforms.validators import DataRequired
 import requests
 
-OMDB_API_KEY = "5f40c1ee"
+OMDB_API_KEY = "YOUR API KEY"
 OMDB_API_URL = "http://www.omdbapi.com/"
 
 app = Flask(__name__)
