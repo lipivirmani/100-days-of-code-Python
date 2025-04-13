@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- Bootstrap-Flask CSS -->
+  {{ bootstrap.load_css() }}
+
+  <!-- Google Fonts for Cinematic + Cutesy Look -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+  <!-- Custom CSS File -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+  <!-- Additional Google Font for a Classic Cinematic Look -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>{% block title %}My Movie App{% endblock %}</title>
+</head>
+
+<body>
+  {% block content %}{% endblock %}
+</body>
+</html>
+
+
