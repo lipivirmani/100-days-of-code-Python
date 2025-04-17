@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #E8AB1E, #A138EB);
+  background-attachment: fixed;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  text-align: center;
+}
+
+.container {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+.container h1, .box h1 {
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  letter-spacing: 1.2px;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.box {
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 320px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+}
+
+.box p, .container p {
+  color: #ff9f68;
+  text-align: center;
+  font-weight: 500;
+}
+
+input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease-in-out;
+}
+
+input:focus {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 15px;
+  color: #fff;
+  background: linear-gradient(135deg, #4a00e0, #8e2de2);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(135deg, #6a00ff, #a767ff);
+}
+
+.btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #00b4db, #0083b0);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+}
+label {
+  display: block;
+  text-align: left;
+  margin-bottom: 6px;
+  margin-top: 12px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
