@@ -7,7 +7,6 @@ import random
 
 app = Flask(__name__)
 
-# CREATE DB
 
 
 class Base(DeclarativeBase):
@@ -73,7 +72,6 @@ def get_cafe_at_location():
     else:
         return jsonify(error={"Not Found": "Sorry, we don't have a cafe at that location."}), 404
 
-# Test this inside Postman. Request type: Post ->  Body ->  x-www-form-urlencoded
 
 
 @app.route("/add", methods=["POST"])
