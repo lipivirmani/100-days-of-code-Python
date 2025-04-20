@@ -15,7 +15,7 @@ from forms import CreatePostForm, RegisterForm, LoginForm, CommentForm
 
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = 'SECRET KEY'
 ckeditor = CKEditor(app)
 Bootstrap5(app)
 
@@ -256,9 +256,22 @@ def about():
     return render_template("about.html", current_user=current_user)
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
-    return render_template("contact.html", current_user=current_user)
+    msg_sent = False
+    if request.method == "POST":
+        name = request.form.get("name")
+        email = request.form.get("email")
+        phone = request.form.get("phone")
+        message = request.form.get("message")
+
+        # (Optional) Log or process the data
+        print(f"New contact form submission:\nName: {name}\nEmail: {email}\nPhone: {phone}\nMessage: {message}")
+
+        msg_sent = True
+
+    return render_template("contact.html", msg_sent=msg_sent, current_user=current_user)
+
 
 
 if __name__ == "__main__":
